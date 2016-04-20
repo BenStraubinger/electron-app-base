@@ -1,0 +1,23 @@
+{
+  "name": "electron-app-base",
+  "description": "A minimal Electron application",
+  "main": "src/js/main.js",
+  "authors": [
+    "Ben Straubinger"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/BenStraubinger/electron-app-base",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.1.8",
+    "jquery": "^2.2.3",
+    "react": "^15.0.1",
+    "babel": "*"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="ext/jquery/jquery.min.js"></script>
+
+    <script src="ext/react/react.min.js"></script>
+    <script src="ext/react/react-dom.min.js"></script>
+    <script src="ext/babel/browser.min.js"></script>
+
+    <link rel="stylesheet" href="ext/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ext/bootstrap/css/bootstrap-theme.min.css">
+    <script src="ext/react-bootstrap/react-bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+    <div id="app-titlebar"></div>
+
+    <div class="container-fluid">
+        <div id="startup-info"></div>
+        <div id="app-settings"></div>
+    </div>
+    
+
+    <!--  -->
+    <script type="text/babel" src="js/StartupAlert.js"></script>
+
+    <!--  -->
+    <script type="text/babel" src="js/AppTitleBar.js"></script>
+
+    <!-- show the window after everything is loaded -->
+    <script type="text/babel">
+        var remote = require('remote');
+        var window = remote.getCurrentWindow();
+        if(! window.isVisible()) {
+            window.show();
+        }
+    </script>
+  </body>
+</html>

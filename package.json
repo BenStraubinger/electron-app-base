@@ -1,0 +1,28 @@
+{
+  "name": "electron-app-base",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "AppMain.js",
+  "scripts": {
+    "start": "electron ./",
+    "build": "electron-packager . App --platform=all --arch=all --version=0.37.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenStraubinger/electron-app-base.git"
+  },
+  "keywords": [],
+  "author": "Ben Straubinger",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/BenStraubinger/electron-app-base/issues"
+  },
+  "homepage": "https://github.com/BenStraubinger/electron-app-base#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "electron-prebuilt": "^0.37.0",
+    "electron-packager": "^6.0.2",
+    "yargs": "^4.6.0"
+  }
+}
