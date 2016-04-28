@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "semantic": "semantic-ui#^2.1.8",
+    "react-bootstrap": "*",
     "jquery": "^2.2.3",
     "react": "^15.0.1",
     "babel": "*"
