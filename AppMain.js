@@ -106,6 +106,12 @@ console.log('Loading window properties: ' + windowConfigFile);
 let windowProperties = {};
 try {
     windowProperties = JSON.parse(fs.readFileSync(windowConfigFile));
+    // add any missing properties from the set of default properties
+    for(var win_key in defaultWindowProperties) {
+        if( ! windowProperties.hasOwnProperty(win_key) ) {
+            windowProperties[win_key] = defaultWindowProperties[win_key];
+        }
+    }
 } catch(e) {
     console.log('Error: Failed to read config file, using defaults.');
     windowProperties = defaultWindowProperties;
@@ -148,14 +154,16 @@ app.on('ready', function () {
     mainWindow.loadURL('file://' + appRootDir + '/src/public/index.html');
 
     mainWindow.on('closed', function() {
+        onsole.log('  TestApp - closing window. \n');
         mainWindow = null;
     });
 });
 
 
 app.on('window-all-closed', function () {
+    console.log('  TestApp - shutting down. \n');
     app.quit();
 });
 
 
-console.log('TestApp started successfully.');
+console.log('TestApp started successfully. \n');

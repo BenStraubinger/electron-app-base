@@ -27,15 +27,16 @@
     </div>
     
 
-    <!--  -->
+    <!-- replacement to the OS titlebar -->
+    <script type="text/babel" src="js/AppTitleBar.js"></script>
+    
+
+    <!-- show alert message confirming everything loaded without error -->
     <script type="text/babel" src="js/StartupAlert.js"></script>
 
-    <!--  -->
-    <script type="text/babel" src="js/AppTitleBar.js"></script>
-
-    <!-- show the window after everything is loaded -->
+    <!-- wait until everything is loaded before showing the window -->
     <script type="text/babel">
-        var remote = require('remote');
+        const remote = require('electron').remote;
         var window = remote.getCurrentWindow();
         if(! window.isVisible()) {
             window.show();

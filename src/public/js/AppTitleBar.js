@@ -1,5 +1,5 @@
 
-var remote = require('remote');
+const remote = require('electron').remote;
 
 const Button = ReactBootstrap.Button;
 const Glyphicon = ReactBootstrap.Glyphicon;
