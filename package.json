@@ -5,7 +5,7 @@
   "main": "AppMain.js",
   "scripts": {
     "start": "electron ./",
-    "build": "electron-packager . App --platform=all --arch=all --version=0.37.0"
+    "build": "electron-packager . App --platform=all --arch=all"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,12 @@
   "devDependencies": {
   },
   "dependencies": {
-    "electron-prebuilt": "^0.37.0",
-    "electron-packager": "^6.0.2",
-    "yargs": "^4.6.0"
+    "electron-prebuilt": "*",
+    "electron-packager": "*",
+    "grunt": "*",
+    "bower": "*",
+    "node-horseman": "*",
+    "valid-url": "*",
+    "yargs": "*"
   }
 }

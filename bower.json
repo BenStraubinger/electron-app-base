@@ -1,7 +1,7 @@
 {
   "name": "electron-app-base",
   "description": "A minimal Electron application",
-  "main": "src/js/main.js",
+  "main": "AppMain.js",
   "authors": [
     "Ben Straubinger"
   ],
@@ -15,9 +15,10 @@
     "tests"
   ],
   "dependencies": {
+    "jquery": "*",
+    "babel": "*",
+    "react": "*",
     "react-bootstrap": "*",
-    "jquery": "^2.2.3",
-    "react": "^15.0.1",
-    "babel": "*"
+    "bootstrap": "*"
   }
 }
