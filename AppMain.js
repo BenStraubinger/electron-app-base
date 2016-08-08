@@ -154,7 +154,7 @@ app.on('ready', function () {
     mainWindow.loadURL('file://' + appRootDir + '/src/public/index.html');
 
     mainWindow.on('closed', function() {
-        onsole.log('  TestApp - closing window. \n');
+        console.log('  TestApp - closing window. \n');
         mainWindow = null;
     });
 });
